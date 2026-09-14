@@ -13,7 +13,6 @@ public class ToxicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ToxicApplication.class, args);
-		log.info("Application started Successfully");
-
+		log.info("Toxic Application started Successfully");
 	}
 }
