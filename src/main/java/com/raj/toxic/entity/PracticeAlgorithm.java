@@ -10,9 +10,6 @@ public class PracticeAlgorithm {
     private static final Logger log = LoggerFactory.getLogger(PracticeAlgorithm.class);
 
     public void execute() {
-
-
         log.info("Algorithm Sorted");
     }
-
 }
