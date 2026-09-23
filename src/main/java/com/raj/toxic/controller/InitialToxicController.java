@@ -1,6 +1,6 @@
 package com.raj.toxic.controller;
 
-import com.raj.toxic.entity.PracticeAlgorithm;
+import com.raj.toxic.service.PracticeDSAlgo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class InitialToxicController {
 
     private static final Logger log = LoggerFactory.getLogger(InitialToxicController.class);
+
+    private final PracticeDSAlgo practiceDSAlgo;
+
+    public InitialToxicController(PracticeDSAlgo practiceDSAlgo) {
+        this.practiceDSAlgo = practiceDSAlgo;
+    }
 
     @GetMapping("/init")
     public String InitialToxicControllerInit() {
@@ -23,8 +29,7 @@ public class InitialToxicController {
 
         log.info("AlgorithmPracticeHandler: Start");
 
-        PracticeAlgorithm practiceAlgorithm = new PracticeAlgorithm();
-        practiceAlgorithm.execute();
+        practiceDSAlgo.execute();
         return "AlgorithmPracticeHandler: Completed";
     }
 }
