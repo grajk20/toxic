@@ -5,4 +5,6 @@ public interface PracticeDSAlgo {
     void execute();
 
     void bubbleSort(int[] input);
+
+    String runPlayground(int valueTwo, int valueThree);
 }
