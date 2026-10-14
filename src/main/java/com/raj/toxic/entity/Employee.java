@@ -1,5 +1,6 @@
 package com.raj.toxic.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,21 +15,32 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String FirstName;
+    private String firstName;
 
-    private String LastName;
+    private String lastName;
 
-    private String Email;
+    private String email;
 
-    private int Age;
+    private int age;
 
-    private String Address;
+    private String address;
 
-    private String City;
+    private String city;
 
-    private String State;
+    private String state;
 
-    private String PinCode;
+    private String pinCode;
+    private String companyName;
+    private Double salary;
 
-    private String CompanyName;
+    public Employee() {
+
+    }
+
+    public Employee(String firstName, String lastName, int age, double salary){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.salary = salary;
+    }
 }

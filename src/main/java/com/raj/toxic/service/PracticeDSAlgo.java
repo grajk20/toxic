@@ -7,4 +7,6 @@ public interface PracticeDSAlgo {
     void bubbleSort(int[] input);
 
     String runPlayground(int valueTwo, int valueThree);
+
+    Double getSecondHighestSalary();
 }

@@ -141,4 +141,14 @@ public class PracticeDSAlgoImpl implements PracticeDSAlgo {
         }
          */
     }
+
+    /**
+     * @return
+     */
+    @Override
+    public Double getSecondHighestSalary() {
+
+
+        return 0.0;
+    }
 }

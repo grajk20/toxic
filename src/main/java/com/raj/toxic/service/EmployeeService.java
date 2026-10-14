@@ -8,4 +8,8 @@ public interface EmployeeService {
 
     public List<Employee> getAllEmployees() ;
 
+    void addEmployee(Employee employee);
+
+    Double getSecondHighestSalary();
+
 }
